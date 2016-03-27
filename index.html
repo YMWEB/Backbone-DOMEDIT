@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CUID in DOM with Backbone</title>
+<script src="lib/jquery-1.12.2.min.js"></script>
+  <script src="lib/underscore-min.js"></script>
+  <script src="lib/backbone-min.js"></script>
+  <style>
+  #pricelist .save{
+  display:none}
+  #pricelist .cancel{
+  display:none}
+  #pricelist .input-v{
+  display:none}
+  
+  #pricelist .editing .edit{
+  display:none}
+  #pricelist .editing .save{
+  display:block
+  }
+  #pricelist .editing .cancel{
+  display:block}
+  #pricelist .editing .input-v{
+  display:block 
+  }
+  #pricelist .editing label{
+  display:none}
+  </style>
+</head>
+<body>
+
+<table id="pricelist">
+	<th>
+	<td>Price</td><td>Operation</td>
+	</th>
+	
+</table>
+
+<script type="text/template" id="item-template">
+<td><label><%- price%></label>
+<input type="text" class="input-v" value="<%- price%>"></td>
+	<td><button class="edit">Edit</button><button class="save">Save</button><button class="cancel">Cancel</button></td>
+</script>
+  <script src="function.js"></script>
+  </body>
+  </html>
